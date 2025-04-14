@@ -17,27 +17,27 @@ class _Page2State extends State<Page2> {
   List<Model> statusList = [
     Model(
       image:
-          'https://ts3.mm.bing.net/th?id=OIP.gjL76vYeGeVWaP4F0LIh2gHaHa&pid=15.1',
+          'assets/images/prof2.png',
       title: 'Selena',
     ),
     Model(
       image:
-          'https://ts3.mm.bing.net/th?id=OIP.gjL76vYeGeVWaP4F0LIh2gHaHa&pid=15.1',
+          'assets/images/prof3.png',
       title: 'Clara',
     ),
     Model(
       image:
-          'https://ts3.mm.bing.net/th?id=OIP.gjL76vYeGeVWaP4F0LIh2gHaHa&pid=15.1',
+          'assets/images/prof4.png',
       title: 'Febian',
     ),
     Model(
       image:
-          'https://ts3.mm.bing.net/th?id=OIP.gjL76vYeGeVWaP4F0LIh2gHaHa&pid=15.1',
+          'assets/images/prof5.jfif',
       title: 'Gemi',
     ),
     Model(
       image:
-          'https://ts3.mm.bing.net/th?id=OIP.gjL76vYeGeVWaP4F0LIh2gHaHa&pid=15.1',
+          'assets/images/prof2.png',
       title: 'Gpt',
     ),
   ];
@@ -155,8 +155,8 @@ class _Page2State extends State<Page2> {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(100),
-                            child: Image.network(
-                              'https://ts3.mm.bing.net/th?id=OIP.gjL76vYeGeVWaP4F0LIh2gHaHa&pid=15.1',
+                            child: Image.asset(
+                              'assets/images/user_profile.png',
                               height: 70,
                               width: 70,
                             ),
@@ -183,7 +183,7 @@ class _Page2State extends State<Page2> {
                                   ),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(100),
-                                    child: Image.network(statusList[index].image),
+                                    child: Image.asset(statusList[index].image),
                                   ),
                                 ),
                               ),

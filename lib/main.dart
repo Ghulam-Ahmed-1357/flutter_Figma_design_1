@@ -23,3 +23,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// https://www.figma.com/design/GVd4waJpH4wsRuNjiT56Lz/-FREE--Friendzy---Dating-Mobile-App-UI-Kit--Community-?node-id=0-1&p=f&t=SseB6vWxLM2yMmFO-0

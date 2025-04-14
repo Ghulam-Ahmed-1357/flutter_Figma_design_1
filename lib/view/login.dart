@@ -18,8 +18,8 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.only(top: 100),
                 child: Container(
-                  child: Image.network(
-                    'https://th.bing.com/th/id/OIP.IZbotS_lEAh-V9QHwOhPTAHaFQ?w=235&h=180&c=7&r=0&o=5&pid=1.7',
+                  child: Image.asset(
+                    'assets/images/Group.png',
                   ),
                 ),
               ),
