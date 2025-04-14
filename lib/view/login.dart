@@ -24,10 +24,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(50.0),
+                padding: const EdgeInsets.only(top: 10,bottom: 20),
                 child: Text(
-                  'Let`s meeting new people around you',
-                  style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+                  'Let`s meeting new \npeople around you',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
               Padding(
@@ -36,14 +36,15 @@ class _HomePageState extends State<HomePage> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
-                    minimumSize: Size.fromHeight(70),
+                    minimumSize: Size.fromHeight(45),
                   ),
                   onPressed: () {},
                   child: Row(
                     children: [
                       CircleAvatar(
+                        radius: 15,
                         backgroundColor: Colors.white,
-                        child: Icon(Icons.phone_in_talk, color: Colors.blue),
+                        child: Icon(Icons.phone_in_talk,size: 20, color: Colors.blue),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 30),
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                           'Login with Phone',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -66,17 +67,18 @@ class _HomePageState extends State<HomePage> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.grey.shade100,
-                    minimumSize: Size.fromHeight(70),
+                    minimumSize: Size.fromHeight(45),
                   ),
                   onPressed: () {},
                   child: Row(
                     children: [
                       CircleAvatar(
+                        radius: 15,
                         backgroundColor: Colors.white,
                         child: Image.network(
                           'https://th.bing.com/th/id/OIP.EhTMbGiYfYzQnWLgjZaoJAHaHa?w=198&h=198&c=7&r=0&o=5&pid=1.7',
-                          height: 30,
-                          width: 30,
+                          height: 20,
+                          width: 20,
                         ),
                       ),
                       Padding(
@@ -85,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                           'Login with Phone',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 20,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -108,7 +110,7 @@ class _HomePageState extends State<HomePage> {
                   child: Text.rich(
                     TextSpan(
                       text: 'Don`t have an account? ',
-                      style: TextStyle(color: Colors.grey, fontSize: 20),
+                      style: TextStyle(color: Colors.grey, fontSize: 16),
                       children: [
                         TextSpan(
                           text: 'Sign Up',
