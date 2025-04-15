@@ -15,31 +15,11 @@ class _Page2State extends State<Page2> {
   bool is_mf = true;
   bool is_sp = false;
   List<Model> statusList = [
-    Model(
-      image:
-          'assets/images/prof2.png',
-      title: 'Selena',
-    ),
-    Model(
-      image:
-          'assets/images/prof3.png',
-      title: 'Clara',
-    ),
-    Model(
-      image:
-          'assets/images/prof4.png',
-      title: 'Febian',
-    ),
-    Model(
-      image:
-          'assets/images/prof5.jfif',
-      title: 'Gemi',
-    ),
-    Model(
-      image:
-          'assets/images/prof2.png',
-      title: 'Gpt',
-    ),
+    Model(image: 'assets/images/prof2.png', title: 'Selena'),
+    Model(image: 'assets/images/prof3.png', title: 'Clara'),
+    Model(image: 'assets/images/prof4.png', title: 'Febian'),
+    Model(image: 'assets/images/prof5.jfif', title: 'Gemi'),
+    Model(image: 'assets/images/prof2.png', title: 'Gpt'),
   ];
   final PageController controller = PageController(initialPage: 0);
   int selectedIndex = 0;
@@ -66,10 +46,11 @@ class _Page2State extends State<Page2> {
           actions: [
             IconButton(
               onPressed: () {
+                print("object");
                 setState(() {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Page3()),
+                    MaterialPageRoute(builder: (context) => Page2()),
                   );
                 });
               },
@@ -95,46 +76,69 @@ class _Page2State extends State<Page2> {
             onTap: onButtonTapped,
             unselectedItemColor: Colors.grey,
             selectedItemColor: Colors.white,
-      
+
             items: [
               BottomNavigationBarItem(
                 icon: CircleAvatar(
-                  backgroundColor: selectedIndex == 0 ? Colors.blue : Colors.white,
-                  child: Icon(Icons.home, color: selectedIndex == 0 ? Colors.white : Colors.grey),
+                  backgroundColor:
+                      selectedIndex == 0 ? Colors.blue : Colors.white,
+                  child: Icon(
+                    Icons.home,
+                    color: selectedIndex == 0 ? Colors.white : Colors.grey,
+                  ),
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: CircleAvatar(
-                  backgroundColor: selectedIndex == 1 ? Colors.blue : Colors.white,
-                  child: Icon(Icons.explore_outlined,  color: selectedIndex == 1 ? Colors.white : Colors.grey),
+                  backgroundColor:
+                      selectedIndex == 1 ? Colors.blue : Colors.white,
+                  child: Icon(
+                    Icons.explore_outlined,
+                    color: selectedIndex == 1 ? Colors.white : Colors.grey,
+                  ),
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: CircleAvatar(
-                  backgroundColor: selectedIndex == 2 ? Colors.blue : Colors.white,
-                  child: Icon(Icons.add,  color: selectedIndex == 2 ? Colors.white : Colors.grey),
+                  backgroundColor:
+                      selectedIndex == 2 ? Colors.blue : Colors.white,
+                  child: Icon(
+                    Icons.add,
+                    color: selectedIndex == 2 ? Colors.white : Colors.grey,
+                  ),
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: CircleAvatar(
-                  backgroundColor: selectedIndex == 3 ? Colors.blue : Colors.white,
-                  child: Icon(Icons.person_2_rounded,  color: selectedIndex == 3 ? Colors.white : Colors.grey),
+                  backgroundColor:
+                      selectedIndex == 3 ? Colors.blue : Colors.white,
+                  child: Icon(
+                    Icons.person_2_rounded,
+                    color: selectedIndex == 3 ? Colors.white : Colors.grey,
+                  ),
                 ),
                 label: '',
               ),
               BottomNavigationBarItem(
                 icon: GestureDetector(
-                  onTap: (){
+                  onTap: () {
                     setState(() {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Page3()));
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Page3()),
+                      );
                     });
                   },
                   child: CircleAvatar(
-                    backgroundColor: selectedIndex == 4 ? Colors.blue : Colors.white,
-                    child: Icon(Icons.messenger, color: selectedIndex == 4 ? Colors.white : Colors.grey),
+                    backgroundColor:
+                        selectedIndex == 4 ? Colors.blue : Colors.white,
+                    child: Icon(
+                      Icons.messenger,
+                      color: selectedIndex == 4 ? Colors.white : Colors.grey,
+                    ),
                   ),
                 ),
                 label: '',
@@ -161,8 +165,11 @@ class _Page2State extends State<Page2> {
                               width: 70,
                             ),
                           ),
-      
-                          Text('My Story'),
+
+                          Padding(
+                            padding: const EdgeInsets.only(top: 5),
+                            child: Text('My Story'),
+                          ),
                         ],
                       ),
                       Row(
@@ -221,7 +228,9 @@ class _Page2State extends State<Page2> {
                                 height: 42,
                                 decoration: BoxDecoration(
                                   color:
-                                      is_mf ? Colors.white : Colors.grey.shade200,
+                                      is_mf
+                                          ? Colors.white
+                                          : Colors.grey.shade200,
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 child: Padding(
@@ -253,7 +262,9 @@ class _Page2State extends State<Page2> {
                                 height: 42,
                                 decoration: BoxDecoration(
                                   color:
-                                      is_sp ? Colors.white : Colors.grey.shade200,
+                                      is_sp
+                                          ? Colors.white
+                                          : Colors.grey.shade200,
                                   borderRadius: BorderRadius.circular(30),
                                 ),
                                 child: Padding(
@@ -284,15 +295,17 @@ class _Page2State extends State<Page2> {
                       borderRadius: BorderRadius.circular(15),
                       child:
                           is_mf
-                              ? Image.network(
-                                'https://media.istockphoto.com/id/485371557/photo/twilight-at-spirit-island.jpg?s=612x612&w=0&k=20&c=FSGliJ4EKFP70Yjpzso0HfRR4WwflC6GKfl4F3Hj7fk=',
-                                height: MediaQuery.of(context).size.height * 0.45,
+                              ? Image.asset(
+                                'assets/images/i1.png',
+                                height:
+                                    MediaQuery.of(context).size.height * 0.45,
                                 width: double.infinity,
                                 fit: BoxFit.fill,
                               )
                               : Image.asset(
                                 'assets/images/image9.jpeg',
-                                height: MediaQuery.of(context).size.height * 0.45,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.45,
                                 width: double.infinity,
                                 fit: BoxFit.fill,
                               ),
@@ -360,14 +373,15 @@ class _Page2State extends State<Page2> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(100),
                                 child: Image.asset(
-                                  'assets/images/image2.jfif',
+                                  'assets/images/u1.png',
                                   fit: BoxFit.cover,
                                   height: 50,
                                   width: 50,
                                 ),
                               ),
                               Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
@@ -452,13 +466,15 @@ class _Page2State extends State<Page2> {
                           is_mf
                               ? Image.asset(
                                 'assets/images/image7.jfif',
-                                height: MediaQuery.of(context).size.height * 0.45,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.45,
                                 width: double.infinity,
                                 fit: BoxFit.fill,
                               )
                               : Image.asset(
                                 'assets/images/image10.jpeg',
-                                height: MediaQuery.of(context).size.height * 0.45,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.45,
                                 width: double.infinity,
                                 fit: BoxFit.fill,
                               ),
@@ -536,7 +552,8 @@ class _Page2State extends State<Page2> {
                                 ),
                               ),
                               Column(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(

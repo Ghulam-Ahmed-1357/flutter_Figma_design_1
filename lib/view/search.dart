@@ -91,8 +91,8 @@ class _Page3State extends State<Page3> {
                             borderRadius: BorderRadius.circular(200),
                             child: Stack(
                               children: [
-                                Image.network(
-                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSET7-hhlSFcFFA37UFyf0ff4pRf8priXXnDA&s',
+                                Image.asset(
+                                  'assets/images/pp1.png',
                                   height: 80,
                                   width: 80,
                                 ),
@@ -138,8 +138,8 @@ class _Page3State extends State<Page3> {
                               borderRadius: BorderRadius.circular(200),
                               child: Stack(
                                 children: [
-                                  Image.network(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTgD14vQ6I-UBiHTcwxZYnpSfLFJ2fclwS2A&s',
+                                  Image.asset(
+                                    'assets/images/pp2.png',
                                     height: 80,
                                     width: 80,
                                   ),
